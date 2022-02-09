@@ -8,9 +8,9 @@
     "build:watch": "npm run build -- --watch",
     "bundle": "rollup -c rollup.config.js",
     "bundle:watch": "npm run bundle -- --watch",
+    "serve": "live-server public/",
     "lint": "eslint src --fix --ext .ts",
-    "prettier": "prettier -wl src",
-    "run": "live-server public/"
+    "prettier": "prettier -wl src"
   },
   "author": "",
   "license": "ISC",
