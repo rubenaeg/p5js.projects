@@ -38,7 +38,7 @@ export class Canvas extends p5 {
       y = x === 0 ? y + 1 : y;
       let mappedX: number = this.map(x, 0, this.rowWidth, 0, this.canvasWidth) + this.pillWidth;
       let mappedY: number =
-        this.map(y, 0, this.pillQuantity / this.rowWidth, -50, this.canvasWidth) + this.pillHeight;
+        this.map(y, 0, this.pillQuantity / this.rowWidth, -50, this.canvasHeight) + this.pillHeight;
 
       // Create a pseudo-random offset
       const offset: number = 20;
@@ -108,7 +108,7 @@ export class Canvas extends p5 {
   applyGrain(): void {
     this.loadPixels();
     for (let x = 0; x < this.canvasWidth; x++) {
-      for (let y = 0; y < this.canvasWidth; y++) {
+      for (let y = 0; y < this.canvasHeight; y++) {
         const index: number = 4 * (y * this.canvasWidth + x);
         const noise = this.map(this.noise(index), 0, 1, 0, 255);
         const noiseStrength: number = 0.3;
