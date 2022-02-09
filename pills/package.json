@@ -5,8 +5,8 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
-    "build:watch": "tsc --watch",
-    "bundle": "rollup -c rollup.config.ts",
+    "build:watch": "npm run build -- --watch",
+    "bundle": "rollup -c rollup.config.js",
     "bundle:watch": "npm run bundle -- --watch",
     "lint": "eslint src --fix --ext .ts",
     "prettier": "prettier -wl src",
